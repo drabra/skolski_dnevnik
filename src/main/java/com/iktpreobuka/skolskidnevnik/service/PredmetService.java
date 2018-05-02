@@ -13,9 +13,14 @@ import com.iktpreobuka.skolskidnevnik.entities.Predmet;
 
 public interface PredmetService {
 
-	ResponseEntity<List<Predaje>> nadjiNastavnikovePredmete(Integer idNastavnik, boolean izTekuceSkolskeGodine);
-	ResponseEntity<Predmet> dodaj(PredmetDto predmetDto);
-	ResponseEntity<Predaje> dodajPredaje(PredajeDto predjeDto);
+	ResponseEntity<List<Predaje>> nadjiNastavnikovePredmete(int idNastavnik, boolean izTekuceSkolskeGodine);
+    ResponseEntity<Predmet> dodaj(PredmetDto predmetDto);
+    ResponseEntity<Predaje> dodajPredaje(PredajeDto predajeDto);
+    ResponseEntity<List<Predmet>> predmeti();
+    ResponseEntity<Predmet> pronadjiPredmet(int id);
+    ResponseEntity<Predmet> izmeniPredmet(int id, PredmetDto predmetDto);
+    ResponseEntity<Predmet> izbrisiPredmet(int id);
+
 	
 
 
